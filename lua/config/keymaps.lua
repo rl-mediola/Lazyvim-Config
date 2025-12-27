@@ -4,3 +4,7 @@
 
 -- q: Save file
 vim.keymap.set("n", "q", ":write<CR>", { noremap = true, silent = true })
+
+-- <space>r: Reset buffer
+vim.keymap.set("n", "<leader>r", ":e!<CR>", { desc = "Reset buffer" })
+
