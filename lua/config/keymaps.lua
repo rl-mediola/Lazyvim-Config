@@ -2,9 +2,15 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- q: Save file
+-- q Save file
 vim.keymap.set("n", "q", ":write<CR>", { noremap = true, silent = true })
 
--- <space>r: Reset buffer
-vim.keymap.set("n", "<leader>r", ":e!<CR>", { desc = "Reset buffer" })
+-- z Redo
+vim.keymap.set("n", "z", ":redo<CR>", { noremap = true, silent = true })
+
+-- ;; Enter Normal mode
+vim.keymap.set({"x", "i"}, ";;", "<esc>", { noremap = true, silent = true })
+
+-- ;r Reset buffer
+vim.keymap.set("n", ";r", ":e!<CR>", { noremap = true, silent = true })
 
