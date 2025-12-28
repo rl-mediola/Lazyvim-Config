@@ -3,10 +3,11 @@
 -- Add any additional keymaps here
 
 -- q Save file
-vim.keymap.set("n", "q", ":write<CR>", { noremap = true, silent = true })
+vim.keymap.set({"n", "x"}, "q", ":write<CR>", { noremap = true, silent = true })
 
 -- z Redo
 vim.keymap.set("n", "z", ":redo<CR>", { noremap = true, silent = true })
+vim.keymap.set("x", "z", "<Nop>", { noremap = true, silent = true })
 
 -- ;; Enter Normal mode
 vim.keymap.set({"x", "i"}, ";;", "<esc>", { noremap = true, silent = true })
