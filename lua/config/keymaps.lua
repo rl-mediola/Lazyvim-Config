@@ -12,5 +12,5 @@ vim.keymap.set("n", "z", ":redo<CR>", { noremap = true, silent = true })
 vim.keymap.set({"x", "i"}, ";;", "<esc>", { noremap = true, silent = true })
 
 -- ;r Reset buffer
-vim.keymap.set("n", ";r", ":e!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", ";r", ":edit!<CR>", { noremap = true, silent = true })
 
