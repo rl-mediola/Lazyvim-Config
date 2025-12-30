@@ -25,3 +25,7 @@ vim.keymap.set({"n", "x", "i"}, "<C-q>", "<CMD>quitall<CR>", { noremap = true, s
 -- CTRL+c Copy
 vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
+
+-- Navigation in insert mode
+vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
