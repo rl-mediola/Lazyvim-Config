@@ -19,8 +19,9 @@ vim.keymap.set("n", "<C-u>", "<CMD>redo<CR>", { noremap = true, silent = true })
 -- ;; Enter Normal mode
 vim.keymap.set({"x", "i"}, ";;", "<ESC>", { noremap = true, silent = true })
 
--- CTRL+c Close
-vim.keymap.set("n", "<C-c>", "<CMD>quitall<CR>", { noremap = true, silent = true })
+-- CTRL+q Close
+vim.keymap.set({"n", "x", "i"}, "<C-q>", "<CMD>quitall<CR>", { noremap = true, silent = true })
 
 -- CTRL+c Copy
 vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
