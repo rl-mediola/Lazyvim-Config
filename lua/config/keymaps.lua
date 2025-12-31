@@ -33,6 +33,7 @@ vim.keymap.set({"n", "x", "i"}, "<C-q>", "<CMD>quitall<CR>", { noremap = true, s
 
 -- CTRL+c Copy
 vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
+vim.keymap.set("s", "<C-c>", "<C-g>y", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
 
 -- Cursor movement in insert mode
