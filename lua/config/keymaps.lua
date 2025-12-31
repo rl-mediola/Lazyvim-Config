@@ -43,6 +43,10 @@ vim.keymap.set("n", "<C-x>", "dd", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<C-v>", "p", { noremap = true, silent = true })
 vim.keymap.set("s", "<C-v>", "<C-g>p", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-v>", "<C-r>+", { noremap = true, silent = true })
+-- CTRL+A Select all
+vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
+vim.keymap.set({"x", "i"}, "<C-a>", "<ESC>ggVG", { noremap = true, silent = true })
+vim.keymap.set("s", "<C-a>", "<C-g><ESC>ggVG", { noremap = true, silent = true })
 
 -- Cursor movement in insert mode
 vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
