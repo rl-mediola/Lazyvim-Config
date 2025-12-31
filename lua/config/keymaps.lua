@@ -12,6 +12,15 @@ vim.keymap.set({"n", "x"}, "<A-j>", "<C-d>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<A-k>", "<C-u>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<C-d>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<C-u>", "<Nop>", { noremap = true, silent = true })
+local function set_horizontal_scrolling()
+local half_width = math.floor(vim.o.columns / 2)
+    vim.keymap.set({'n', "x"}, '<A-h>', half_width .. 'h', { noremap = true, silent = true })
+    vim.keymap.set({'n', "x"}, '<A-l>', half_width .. 'l', { noremap = true, silent = true })
+end
+set_horizontal_scrolling()
+vim.api.nvim_create_autocmd("VimResized", {
+    callback = set_horizontal_scrolling,
+})
 
 -- CTRL+u Redo
 vim.keymap.set("n", "<C-u>", "<CMD>redo<CR>", { noremap = true, silent = true })
@@ -26,6 +35,6 @@ vim.keymap.set({"n", "x", "i"}, "<C-q>", "<CMD>quitall<CR>", { noremap = true, s
 vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
 
--- Navigation in insert mode
+-- Cursor movement in insert mode
 vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
