@@ -49,8 +49,13 @@ vim.keymap.set({"x", "i"}, "<C-a>", "<ESC>ggVG", { noremap = true, silent = true
 vim.keymap.set("s", "<C-a>", "<C-g><ESC>ggVG", { noremap = true, silent = true })
 
 -- Cursor movement in insert mode
-vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
-vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-h>", "<Left>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-l>", "<Right>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-j>", "<Down>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-k>", "<UP>", { noremap = true, silent = true })
+
+-- CTRL+l delete character to the right to match with CTRL+h
+vim.keymap.set("i", "<C-l>", "<DEL>", { noremap = true, silent = true })
 
 -- Mouse click enters insert mode
 vim.keymap.set("n", "<LeftMouse>", "<LeftMouse>i", { noremap = true, silent = true })
