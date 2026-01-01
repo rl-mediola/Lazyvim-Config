@@ -26,6 +26,14 @@ return {
   opts = {
     cmake_generate_options = { "-GNinja", "-DCMAKE_EXPORT_COMPILE_COMMANDS=1" },
     cmake_build_directory = "build",
+    cmake_executor = {
+      default_opts = {
+        quickfix = {
+          size = 30,
+          auto_close_when_success = false,
+        }
+      }
+    }
   },
   keys = keys,
 }
