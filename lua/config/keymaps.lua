@@ -61,7 +61,12 @@ vim.keymap.set("i", "<S-Left>", "<ESC>v<C-g><Left>", { noremap = true, silent = 
 vim.keymap.set("i", "<S-Right>", "<ESC>v<C-g><Right>", { noremap = true, silent = true })
 
 -------------------------------------- Remove unused keymaps --------------------------------------
+-- up/down
+vim.keymap.set({"n", "x"}, "-", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set({"n", "x"}, "+", "<Nop>", { noremap = true, silent = true })
+-- page up/down
 vim.keymap.set({"n", "x"}, "<C-f>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<C-b>", "<Nop>", { noremap = true, silent = true })
+-- marks
 vim.keymap.set({"n", "x"}, "'", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "`", "<Nop>", { noremap = true, silent = true })
