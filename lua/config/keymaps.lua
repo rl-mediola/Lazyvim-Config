@@ -24,6 +24,7 @@ vim.api.nvim_create_autocmd("VimResized", {
 
 -- CTRL+u Redo
 vim.keymap.set("n", "<C-u>", "<CMD>redo<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-r", "<Nop>", { noremap = true, silent = true })
 
 -- ;; Enter Normal mode
 vim.keymap.set({"x", "i"}, ";;", "<ESC>", { noremap = true, silent = true })
