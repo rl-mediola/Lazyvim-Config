@@ -5,7 +5,4 @@
 -- use absolute line numbers
 vim.opt.relativenumber = false
 
--- use login shell
-LazyVim.terminal.setup("bash --login")
-
 vim.opt.selectmode = { 'mouse' }
