@@ -17,6 +17,12 @@ apt install unzip ripgrep fd
 | \<CTRL>I   | jump forth              |
 | \<SPACE>ch | switch to header/source |
 
+## Debugging
+
+| Key                 | Action         |
+| :------------------ | :------------- |
+| \<CTRC>s \<CTRL>n a | show all noice |
+
 ## Normal mode
 
 | Key             | Action       |
